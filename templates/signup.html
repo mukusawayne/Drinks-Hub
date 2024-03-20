@@ -1,0 +1,41 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Client Signup Page</title>
+        <link rel="stylesheet" href="../static/files/css/bootstrap.min.css">
+        <script src="../static/files/js/bootstrap.bundle.min.js"></script>
+        <style>
+            #form_id {
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        {%include'navbar.html'%}
+        <div class="container-fluid">
+            <section class="row" style="background-color: rgb(172,199,219);">
+                <div class="col-md-5" id="form_id" style="margin: auto;">
+                    <h3 class="text-warning ms-4">Create an Account Now</h3>
+                    <span class="text-danger">{{message}}</span>
+                    <span class="text-danger">{{success}}</span>
+                    <span class="text-danger">{{error}}</span>
+                    <form action="/signup" method="post">
+                        <input type="text" placeholder="Enter username" name="username" class="form-control"><br>
+                        <input type="email" name="email" placeholder="Enter Email" class="form-control"><br>
+                        <input type="tel" name="phone" placeholder="Enter phone number" class="form-control"><br>
+                        <input type="password" name="password" placeholder="Enter password" class="form-control"><br>
+                        <input type="password" name="confirm_password" placeholder="Confirm password"
+                            class="form-control "><br>
+                        <center><input type="submit" class="btn btn-success" value="Create Account"></center>
+                    </form>
+                </div>
+            </section>
+        </div>
+        {%include'footer.html'%}
+    </body>
+
+</html>

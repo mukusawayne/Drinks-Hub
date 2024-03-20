@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Client Signin Page</title>
+        <link rel="stylesheet" href="../static/files/css/bootstrap.min.css">
+        <script src="../static/files/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        {% include 'navbar.html' %}
+        <!--Create a signin form  -->
+        <div class="container">
+            <section class="row">
+                <div class="col-md-6">
+                    <img src="../static/files/images/vodka.jpeg" class="img-fluid" height="300" alt="">
+                </div>
+                <!-- login form -->
+                <div class="col-md-6">
+                    <br><br>
+                    <br><br>
+                    {{error}}
+
+                    <h3 style="text-transform: capitalize;" class="text-primary text-center">Sign in to access your
+                        account
+                    </h3>
+                    <form action="/signin" method="post">
+                        <input type="text" name="username" placeholder="Enter Your Username" class="form-control"><br>
+                        <input type="password" name="password" placeholder="Enter Your Password"
+                            class="form-control"><br>
+                        <input type="submit" class="btn btn-success ms-0" value="Login">
+                </div>
+                </form>
+            </section>
+
+        </div>
+        <br><br>
+
+        {% include 'footer.html' %}
+    </body>
+
+</html>

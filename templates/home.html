@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Drinks Hub</title>
+        <!--  CSS Supporting FIles  -->
+        <!-- link bootstrap files -->
+        <link href="../static/files/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../static/files/css/lightslider.css">
+        <link rel="stylesheet" href="../static/files/css/style.css">
+        <!--  JS  Supporting FIles    -->
+        <script src="../static/files/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/files/js/jquery.js"></script>
+        <script src="../static/files/js/lightslider.js"></script>
+        <script src="../static/files/js/script.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <!-- create a navbar -->
+            {% include 'navbar.html'%}
+            <br>
+            <!-- create a carousel -->
+            {% include 'carousel.html'%}
+            <!-- create a section with a format of one product -->
+            <br>
+            <br>
+            <h2 class="text-success text-=1g" style="text-decoration: underline rgb(1, 25, 32);">Wines</h2>
+            <section class="slider p-4">
+                <ul class="cs-hidden autoWidth">
+                    <!-- the for loop ensures that all the products in the selection have been displayed -->
+                    {% for wines in mywines %}
+                    <li>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="../static/files/images/{{ wines[5]}}" width="50" height="50">
+                                <div class="overlay">
+                                    <a href="/single_item/{{ wines[0]}}" class="buy-btn">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                {{wines[1]}}<br>
+                                <b class="text-warning">KES {{wines[3]}}</b>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <!--Whiskey section/category -->
+            <h2 class="text-success text-=1g" style="text-decoration: underline rgb(1, 25, 32);">Whiskey Drinks</h2>
+            <section class="slider p-4">
+                <ul class="cs-hidden autoWidth">
+                    <!-- the for loop ensures that all the products in the selection have been displayed -->
+                    {% for whiskeys in mywhiskeys %}
+                    <li>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="../static/files/images/{{ whiskeys[5]}}" width="50" height="50">
+                                <div class="overlay">
+                                    <a href="/single_item/{{ whiskeys[0]}}" class="buy-btn">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                {{whiskeys[1]}}<br>
+                                <b class="text-warning">KES {{whiskeys[3]}}</b>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            </section>
+            <!-- vodka section/category -->
+            <h2 class="text-success text-=1g" style="text-decoration: underline rgb(1, 25, 32);">Vodka Drinks</h2>
+            <section class="slider p-4">
+                <ul class="cs-hidden autoWidth">
+                    <!-- the for loop ensures that all the products in the selection have been displayed -->
+                    {% for vodkas in myvodkas %}
+                    <li>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="../static/files/images/{{ vodkas[5]}}" width="50" height="50">
+                                <div class="overlay">
+                                    <a href="/single_item/{{ vodkas[0]}}" class="buy-btn">Buy Now</a>
+                                </div>
+                            </div>s
+                            <div class="detail-box">
+                                {{vodkas[1]}}<br>
+                                <b class="text-warning">KES {{vodkas[3]}}</b>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            </section>
+            <!-- Tequila section/category -->
+            <h2 class="text-success text-=1g" style="text-decoration: underline rgb(1, 25, 32);">Tequila Drinks</h2>
+            <section class="slider p-4">
+                <ul class="cs-hidden autoWidth">
+                    <!-- the for loop ensures that all the products in the selection have been displayed -->
+                    {% for tequilas in mytequilas %}
+                    <li>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="../static/files/images/{{ tequilas[5]}}" width="50" height="50">
+                                <div class="overlay">
+                                    <a href="/single_item/{{ tequilas[0]}}" class="buy-btn">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                {{tequilas[1]}}<br>
+                                <b class="text-warning">KES {{tequilas[3]}}</b>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <!-- Gin section/category -->
+            <h2 class="text-success text-=1g" style="text-decoration: underline rgb(1, 25, 32);">Gin Drinks</h2>
+            <section class="slider p-4">
+                <ul class="cs-hidden autoWidth">
+                    <!-- the for loop ensures that all the products in the selection have been displayed -->
+                    {% for gins in mygins %}
+                    <li>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="../static/files/images/{{ gins[5]}}" width="50" height="50">
+                                <div class="overlay">
+                                    <a href="/single_item/{{ gins[0]}}" class="buy-btn">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                {{gins[1]}}<br>
+                                <b class="text-warning">KES {{gins[3]}}</b>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <!-- Rum section/category -->
+            <h2 class="text-success text-=1g" style="text-decoration: underline rgb(1, 25, 32);">Rum Drinks</h2>
+            <section class="slider p-4">
+                <ul class="cs-hidden autoWidth">
+                    <!-- the for loop ensures that all the products in the selection have been displayed -->
+                    {% for rums in rums %}
+                    <li>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="../static/files/images/{{ rums[5]}}" width="50" height="50">
+                                <div class="overlay">
+                                    <a href="/single_item/{{ rums[0]}}" class="buy-btn">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                {{rums[1]}}<br>
+                                <b class="text-warning">KES {{rums[3]}}</b>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <!-- Brandy section/category -->
+            <h2 class="text-success text-=1g" style="text-decoration: underline rgb(1, 25, 32);">Brandy Drinks</h2>
+            <section class="slider p-4">
+                <ul class="cs-hidden autoWidth">
+                    <!-- the for loop ensures that all the products in the selection have been displayed -->
+                    {% for brandys in mybrandys %}
+                    <li>
+                        <div class="box">
+                            <div class="slide-img">
+                                <img src="../static/files/images/{{ brandys[5]}}" width="50" height="50">
+                                <div class="overlay">
+                                    <a href="/single_item/{{ brandys[0]}}" class="buy-btn">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                {{brandys[1]}}<br>
+                                <b class="text-warning">KES {{brandys[3]}}</b>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
+        <br><br>
+        {%include 'footer.html'%}
+    </body>
+
+</html>
